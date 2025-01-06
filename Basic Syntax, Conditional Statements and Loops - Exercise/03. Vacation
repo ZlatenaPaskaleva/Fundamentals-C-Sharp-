@@ -1,0 +1,68 @@
+int pplCount = int.Parse(Console.ReadLine());
+string typeOfGroup = Console.ReadLine();
+string dayOfTheWeek = Console.ReadLine();
+
+double pricePerPerson = 0;
+
+if (typeOfGroup == "Students")
+{
+	if (dayOfTheWeek == "Friday")
+	{
+		pricePerPerson = 8.45;
+	}
+	else if (dayOfTheWeek == "Saturday")
+	{
+		pricePerPerson = 9.80;
+	}
+	else if (dayOfTheWeek == "Sunday")
+	{
+		pricePerPerson = 10.46;
+	}
+}
+else if (typeOfGroup == "Business")
+{
+    if (dayOfTheWeek == "Friday")
+    {
+        pricePerPerson = 10.90;
+    }
+    else if (dayOfTheWeek == "Saturday")
+    {
+        pricePerPerson = 15.60;
+    }
+    else if (dayOfTheWeek == "Sunday")
+    {
+        pricePerPerson = 16;
+    }
+}
+else if (typeOfGroup == "Regular")
+{
+    if (dayOfTheWeek == "Friday")
+    {
+        pricePerPerson = 15;
+    }
+    else if (dayOfTheWeek == "Saturday")
+    {
+        pricePerPerson = 20;
+    }
+    else if (dayOfTheWeek == "Sunday")
+    {
+        pricePerPerson = 22.50;
+    }
+}
+
+double sum = pplCount * pricePerPerson;
+
+if (pplCount >= 30 && typeOfGroup == "Students")
+{
+    sum -= sum * 0.15;
+}
+if (pplCount >= 100 && typeOfGroup == "Business")
+{
+    sum = (pplCount - 10) * pricePerPerson;
+}
+if (pplCount >= 10 && pplCount <= 20 && typeOfGroup == "Regular")
+{
+    sum -= sum * 0.05;
+}
+
+Console.WriteLine($"Total price: {sum:F2}");
