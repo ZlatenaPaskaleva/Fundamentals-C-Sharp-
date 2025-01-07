@@ -1,0 +1,13 @@
+int orders = int.Parse(Console.ReadLine());
+double total = 0;
+
+for (int i = 1; i <= orders; i++)
+{
+    double coffeePrice = double.Parse(Console.ReadLine());
+    int daysCount = int.Parse(Console.ReadLine());
+    int coffeeCount = int.Parse(Console.ReadLine());
+    double price = ((daysCount * coffeeCount) * coffeePrice);
+    total += price;
+    Console.WriteLine($"The price for the coffee is: ${price:F2}");
+}
+Console.WriteLine($"Total: ${total:F2}");
