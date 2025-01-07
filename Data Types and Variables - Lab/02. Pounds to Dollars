@@ -1,0 +1,5 @@
+double britishPounds = double.Parse(Console.ReadLine());
+
+double usd = britishPounds * 1.31;
+
+Console.WriteLine($"{usd:F3}");
