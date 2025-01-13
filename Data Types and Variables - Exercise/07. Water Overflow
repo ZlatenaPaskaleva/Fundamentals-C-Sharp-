@@ -1,0 +1,19 @@
+int n = int.Parse(Console.ReadLine());
+
+int waterPoured = 0;
+
+for(int i = 0;i < n; i++)
+{
+    int littersToAdd = int.Parse(Console.ReadLine());
+	
+	if (waterPoured + littersToAdd <= 255)
+	{
+		waterPoured += littersToAdd;
+	}
+	else if (littersToAdd + waterPoured > 255)
+	{
+        Console.WriteLine("Insufficient capacity!");
+		continue;
+  }
+}
+Console.WriteLine(waterPoured);
