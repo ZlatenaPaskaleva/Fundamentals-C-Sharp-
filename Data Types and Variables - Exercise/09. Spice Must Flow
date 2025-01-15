@@ -1,0 +1,21 @@
+int startingYield = int.Parse(Console.ReadLine());
+
+int totalSpiceExtracted = 0;
+int daysOperated = 0;
+
+while (startingYield >= 100)
+{
+    totalSpiceExtracted += startingYield;
+
+    totalSpiceExtracted -= 26;
+
+    daysOperated++;
+
+    startingYield -= 10;
+}
+if (totalSpiceExtracted >= 26)
+{
+    totalSpiceExtracted -= 26;
+}
+Console.WriteLine(daysOperated);
+Console.WriteLine(totalSpiceExtracted);
