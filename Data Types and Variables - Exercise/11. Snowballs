@@ -1,0 +1,25 @@
+using System.Numerics;
+
+int snowballs = int.Parse(Console.ReadLine());
+
+BigInteger snowballsValueMax = 0;
+int snowMax = 0;
+int timeMax = 0;
+int qualityMax = 0;
+
+for (int i = 0; i < snowballs; i++)
+{
+    int snow = int.Parse(Console.ReadLine());
+    int time = int.Parse(Console.ReadLine());
+    int quality = int.Parse(Console.ReadLine());
+
+    BigInteger value = BigInteger.Pow(snow / time, quality);
+    if (value >= snowballsValueMax)
+    {
+        snowballsValueMax = value;
+        snowMax = snow;
+        timeMax = time;
+        qualityMax = quality;
+    }
+}
+Console.WriteLine($"{snowMax} : {timeMax} = {snowballsValueMax} ({qualityMax})");
