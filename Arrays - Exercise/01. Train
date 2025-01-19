@@ -1,1 +1,15 @@
+int wagons = int.Parse(Console.ReadLine());
 
+int[] train = new int[wagons];
+int passengers = 0;
+for (int i = 0; i < wagons; i++)
+{
+    train[i] = int.Parse(Console.ReadLine());
+    passengers += train[i];
+}
+foreach (var wagon in train)
+{
+    Console.Write(wagon + " " );
+}
+Console.WriteLine();
+Console.WriteLine(passengers);
