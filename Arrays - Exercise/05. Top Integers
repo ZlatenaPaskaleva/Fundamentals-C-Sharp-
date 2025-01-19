@@ -1,1 +1,18 @@
+int[] arr = Console.ReadLine().Split().Select(int.Parse).ToArray();
 
+for (int i = 0; i < arr.Length; i++)
+{
+	bool bigerInt = true;
+
+	for (int j = i + 1; j < arr.Length; j++)
+	{
+		if (arr[i] <= arr[j])
+		{
+			bigerInt =false;
+		}
+	}
+	if (bigerInt == true)
+	{
+		Console.Write(arr[i] + " ");
+	}
+}
