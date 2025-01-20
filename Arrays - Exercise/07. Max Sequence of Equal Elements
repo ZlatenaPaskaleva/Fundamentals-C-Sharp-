@@ -1,1 +1,25 @@
+int[] input = Console.ReadLine().Split(' ').Select(int.Parse).ToArray();
 
+int maxElements = 0;
+int currentEqEl = 1;
+int element = 0;
+for (int i = 0; i < input.Length-1; i++)
+{
+	if (input[i] == input[i + 1])
+	{
+		currentEqEl++;
+	}
+	else
+	{
+		currentEqEl = 1;
+	}
+	if (currentEqEl > maxElements)
+	{
+		maxElements = currentEqEl;
+		element = input[i];
+	}
+}
+for (int i = 0; i < maxElements; i++)
+{
+	Console.Write(element + " ");
+}
