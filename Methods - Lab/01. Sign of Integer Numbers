@@ -1,1 +1,21 @@
+int numberInput = int.Parse(Console.ReadLine());
 
+PrintSighn(numberInput);
+
+
+
+static void PrintSighn(int number)
+{
+	if (number > 0)
+	{
+		Console.WriteLine($"The number {number} is positive.");
+	}
+	else if (number < 0)
+	{
+		Console.WriteLine($"The number {number} is negative.");
+	}
+	else if (number == 0)
+	{
+		Console.WriteLine($"The number {number} is zero.");
+	}
+}
