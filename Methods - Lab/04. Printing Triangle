@@ -1,1 +1,24 @@
+int n = int.Parse(Console.ReadLine());
 
+PrintTriangle(n);
+    
+    
+static void PrintTriangle(int number)
+{
+    for (int row = 1; row <= number; row++)
+    {
+        PrintCol(row);
+    }
+    for (int row = number - 1; row >= 1; row--)
+    {
+        PrintCol(row);
+    }
+}
+static void PrintCol(int row)
+{
+    for (int j = 1; j <= row; j++)
+    {
+        Console.Write(j + " ");
+    }
+    Console.WriteLine();
+}
