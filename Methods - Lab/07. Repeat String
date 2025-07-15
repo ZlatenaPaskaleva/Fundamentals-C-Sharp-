@@ -1,1 +1,16 @@
+string word = Console.ReadLine();
+int n = int.Parse(Console.ReadLine());
 
+string repeated = RepeatString(word, n);
+Console.WriteLine(repeated);
+
+
+static string RepeatString(string word, int n)
+      {
+          string result = "";
+          for (int i = 0; i < n; i++)
+          {
+              result += word;
+          }
+          return result;
+      }
