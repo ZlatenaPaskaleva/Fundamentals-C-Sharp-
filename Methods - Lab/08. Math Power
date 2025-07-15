@@ -1,1 +1,13 @@
+double num1 = double.Parse(Console.ReadLine());
+int num2 = int.Parse(Console.ReadLine());
 
+double raisedBase = RaisedNum(num1, num2);
+
+Console.WriteLine(raisedBase);
+
+static double RaisedNum(double num1, int num2)
+{
+    double result = Math.Pow(num1, num2);
+
+    return result;
+}
