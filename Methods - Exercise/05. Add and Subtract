@@ -1,1 +1,20 @@
+int first = int.Parse(Console.ReadLine());
+int second = int.Parse(Console.ReadLine());
+int third = int.Parse(Console.ReadLine());
 
+int sum = SumOfInt(first, second);
+int result = SubtractOfInt(sum, third);
+
+Console.WriteLine(result);
+
+static int SumOfInt(int first, int second)
+{
+    int result = first + second;
+    return result;
+}
+
+static int SubtractOfInt(int sum, int third)
+{
+    int result = sum - third;
+    return result;
+}
