@@ -1,1 +1,17 @@
+string input = Console.ReadLine();
+PrintMiddleCharacter(input);
 
+static void PrintMiddleCharacter(string str)
+{
+    int length = str.Length;
+    int mid = length / 2;
+
+    if (length % 2 == 0)
+    {
+        Console.WriteLine($"{str[mid - 1]}{str[mid]}");
+    }
+    else
+    {
+        Console.WriteLine(str[mid]);
+    }
+}
