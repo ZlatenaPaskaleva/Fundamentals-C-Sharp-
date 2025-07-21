@@ -1,1 +1,21 @@
+char input1 = char.Parse(Console.ReadLine());
+char input2 = char.Parse(Console.ReadLine());
 
+PrintCharactersBetween(input1, input2);
+
+static void PrintCharactersBetween(char first, char second)
+{
+    
+    if (first > second)
+    {
+        char temp = first;
+        first = second;
+        second = temp;
+    }
+
+    for (char c = (char)(first + 1); c < second; c++)
+    {
+        Console.Write(c + " ");
+    }
+
+}
